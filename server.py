@@ -23,7 +23,22 @@ def process_request(line):
     pass
 
 def handle_client(connection, address):
-    pass
+    print(f"Connected by {address}")
+    connection_file = connection.makefile("r")
+    
+    for line in connection_file:
+        line2 = line.strip()
+        if not line2:
+            continue
+        if line2.upper() == "QUIT":
+            print(f"Client {address} requested to quit.")
+            break
+        
+        response = process_request(line2)
+        connection.sendall(response.encode() + b"\n")
+    
+    connection.close()
+    print(f"Connection with {address} now closed.")
 
 def main():
     print(f"Server listening on port {PORT}...")
