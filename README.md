@@ -13,11 +13,11 @@
 ## Files
 
 | File             | Purpose                                         |
-|------------------|--------------------------------------------------|
+|------------------|-------------------------------------------------|
 | `server.py`      | TCP server — accept loop + one thread per client + does the conversion|
 | `client.py`      | Interactive TCP client                          |
-| `protocol.md`    | Wire protocol specification                     |
-| `design_doc.md`  | Design explanation (architecture, decisions)    |
+| `protocol_design.md`    | Wire protocol specification              |
+| `README.md`      | Design explanation                              |
 
 ## How to compile
 
@@ -30,7 +30,7 @@ python3 --version
 ## How to run server
 
 ```
-python3 server.py [port]
+python3 server.py
 ```
 
 - Since the instructions jsut say specified port, we decided to use port 9000.
@@ -50,7 +50,7 @@ In a separate terminal (can be on the same machine or a different one
 on the network):
 
 ```
-python3 client.py [host] [port]
+python3 client.py
 ```
 
 - `host` defaults to `127.0.0.1` (localhost)
