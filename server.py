@@ -115,7 +115,7 @@ def handle_client(connection, address):
         line2 = line.strip()
         if not line2:
             continue
-        if line2.upper() == "QUIT":
+        if line2.upper() == "QUIT" or line2.upper() == "EXIT":
             print(f"Client {address} requested to quit.")
             break
         

@@ -28,7 +28,7 @@ while True:
     
     client_socket.sendall(request.encode()+ b"\n")
     
-    if request.upper() == "QUIT":
+    if request.upper() == "QUIT" or request.upper() == "EXIT":
         break
     
     response = client_file.readline().strip()
