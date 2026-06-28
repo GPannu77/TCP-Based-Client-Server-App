@@ -4,7 +4,7 @@ client.py: Multi-Service TCP Client
 
 Using: python3 client.py
 Connects to the server at HOST:PORT below and lets you send as many 
-CONVERT requests as you want, one per line, until you type QUIT.
+CONVERT requests as you want, one per line, until you type QUIT or EXIT.
 """
 
 import socket
