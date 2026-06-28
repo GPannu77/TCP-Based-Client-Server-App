@@ -14,9 +14,8 @@
 
 | File             | Purpose                                         |
 |------------------|--------------------------------------------------|
-| `server.py`      | TCP server — accept loop + one thread per client |
+| `server.py`      | TCP server — accept loop + one thread per client + does the conversion|
 | `client.py`      | Interactive TCP client                          |
-| `conversions.py` | Conversion logic, shared by the server          |
 | `protocol.md`    | Wire protocol specification                     |
 | `design_doc.md`  | Design explanation (architecture, decisions)    |
 
